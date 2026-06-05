@@ -446,7 +446,7 @@ function buildVoices() {
 }
 
 /* ---------- Init ---------- */
-document.addEventListener('DOMContentLoaded', () => {
+function __init28() {
   buildModules();
   buildCards();
   buildVoices();
@@ -454,4 +454,9 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(updateCountdown, 60 * 1000);
   initHeader();
   initReveal();
-});
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', __init28);
+} else {
+  __init28();
+}
