@@ -779,12 +779,38 @@ img { max-width: 100%; display: block; }
 .env { background: var(--night); color: #EDEDF0; }
 .env .section-head h2 { color: #fff; }
 .env .section-head p { color: var(--night-muted); }
-.env-layout { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(28px, 4vw, 56px); align-items: start; }
-@media (max-width: 880px) { .env-layout { grid-template-columns: 1fr; } }
-.env-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.env-gallery image-slot { width: 100%; }
-.env-gallery .tall { grid-row: span 2; }
-.env-list { display: grid; gap: 2px; }
+.env-photos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 152px;
+  gap: 12px;
+  margin-bottom: 44px;
+}
+.env-photos figure {
+  position: relative; overflow: hidden;
+  border-radius: 14px; border: 1px solid var(--night-line);
+  background: var(--night-2);
+}
+.env-photos img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.env-photos .hero img { object-position: center 30%; }
+.env-photos .hero { grid-column: span 2; grid-row: span 2; }
+.env-photos .por  { grid-column: span 1; grid-row: span 2; }
+.env-photos .wide { grid-column: span 2; grid-row: span 1; }
+.env-photos figcaption {
+  position: absolute; left: 14px; bottom: 13px;
+  font-family: var(--mono); font-size: 12px; font-weight: 600; letter-spacing: .03em;
+  color: #fff; background: rgba(10,10,12,.55);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  padding: 6px 12px; border-radius: 999px; white-space: nowrap;
+}
+@media (max-width: 880px) {
+  .env-photos { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 130px; }
+  .env-photos .hero { grid-column: span 2; grid-row: span 2; }
+  .env-photos .por  { grid-column: span 1; grid-row: span 2; }
+  .env-photos .wide { grid-column: span 2; grid-row: span 1; }
+}
+.env-list { display: grid; grid-template-columns: repeat(2, 1fr); column-gap: clamp(28px, 4vw, 56px); }
+@media (max-width: 720px) { .env-list { grid-template-columns: 1fr; } }
 .env-list .item {
   display: grid; grid-template-columns: auto 1fr; gap: 16px;
   padding: 16px 0;

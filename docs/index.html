@@ -213,16 +213,20 @@
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow on-dark">Learning environment</span>
-      <h2>혼자 두지 않는<br>몰입형 교육 환경</h2>
+      <h2>몰입형 교육 환경</h2>
       <p>kt ds 방배 교육센터. 개인 전용 고사양 PC부터 무제한 커피까지, 학습에만 집중할 수 있는 환경을 제공합니다.</p>
     </div>
-    <div class="env-layout">
-      <div class="env-gallery reveal">
-        <image-slot id="env1" class="tall" style="height:328px" shape="rounded" radius="16" placeholder="강의장 사진"></image-slot>
-        <image-slot id="env2" style="height:158px" shape="rounded" radius="16" placeholder="PC / 좌석 사진"></image-slot>
-        <image-slot id="env3" style="height:158px" shape="rounded" radius="16" placeholder="휴게/도서 사진"></image-slot>
-      </div>
-      <div class="env-list reveal d1">
+    <div class="env-photos reveal">
+      <figure class="hero">
+        <img src="images/env/classroom.jpg" alt="Blue 실무형 실습 공간 — PC 실습실" loading="lazy">
+        <figcaption>Blue · 실무형 실습 공간</figcaption>
+      </figure>
+      <figure class="por"><img src="images/env/cafe.jpg" alt="라운지 · 스터디 카페 공간" loading="lazy"></figure>
+      <figure class="por"><img src="images/env/pantry.jpg" alt="휴게실 · 커피/음료 바" loading="lazy"></figure>
+      <figure class="wide"><img src="images/env/lounge.jpg" alt="휴게 라운지" loading="lazy"></figure>
+      <figure class="wide"><img src="images/env/hallway.jpg" alt="교육센터 복도" loading="lazy"></figure>
+    </div>
+    <div class="env-list reveal d1">
         <div class="item">
           <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
           <div><h4>개인 전용 고사양 데스크탑 PC</h4><p>1인 1좌석 · 개인 사물함 제공</p></div>
@@ -244,7 +248,6 @@
           <div><h4>kt 방배빌딩 B동 211호 강의장</h4><p>전용 강의실 06:00~22:00 이용 가능</p></div>
         </div>
       </div>
-    </div>
   </div>
 </section>
 
@@ -377,40 +380,6 @@
     </div>
   </div>
 </section>
-
-<!-- ============ CAMPAIGN CARDS ============ -->
-<section class="cards section" id="cards" data-screen-label="Campaign cards">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Campaign · 9 cards</span>
-      <h2>한눈에 보는 제28기</h2>
-      <p>핵심 메시지를 담은 홍보 카드 9장. 카드를 클릭하면 크게 볼 수 있습니다.</p>
-    </div>
-  </div>
-  <div class="cards-rail reveal">
-    <button class="rail-nav prev" id="railPrev" aria-label="이전 카드">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 18l-6-6 6-6"/></svg>
-    </button>
-    <div class="rail-track" id="railTrack"></div>
-    <button class="rail-nav next" id="railNext" aria-label="다음 카드">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 18l6-6-6-6"/></svg>
-    </button>
-  </div>
-  <div class="wrap"><div class="rail-dots" id="railDots"></div></div>
-</section>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" aria-hidden="true">
-  <button class="lb-close" id="lbClose" aria-label="닫기">✕</button>
-  <button class="lb-nav lb-prev" id="lbPrev" aria-label="이전">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 18l-6-6 6-6"/></svg>
-  </button>
-  <img id="lbImg" alt="">
-  <button class="lb-nav lb-next" id="lbNext" aria-label="다음">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 18l6-6-6-6"/></svg>
-  </button>
-  <div class="lb-counter" id="lbCounter"></div>
-</div>
 
 <!-- ============ CAMPAIGN FILM ============ -->
 <section class="videofeat section" id="film" data-screen-label="Film">
