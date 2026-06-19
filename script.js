@@ -5,54 +5,59 @@
 /* ---------- Curriculum modules ---------- */
 const MODULES = [
   {
-    no: '01', title: 'Core Java Programming', en: 'Java',
+    no: '01', title: 'Core Java Programming', en: 'Java', hours: '148h',
     desc: 'Java 기본 문법부터 객체지향(OOP)의 원리까지. 컬렉션 · 예외처리 · 람다 · Stream을 실습형 애플리케이션 제작으로 체득합니다.',
     tags: ['문법', 'OOP', '컬렉션', '예외처리', '람다', 'Stream']
   },
   {
-    no: '02', title: 'Database Programming', en: 'Oracle',
+    no: '02', title: 'Database Programming', en: 'Oracle', hours: '88h',
     desc: 'SQL 기초부터 고급(SELECT · JOIN · SUB-QUERY)까지. 인덱스 · 시퀀스 · ERD 설계를 익히고 Java-DB 연동 게시판 프로젝트로 마무리합니다.',
     tags: ['SQL', 'JOIN', 'SUB-QUERY', '인덱스', 'ERD', 'JDBC']
   },
   {
-    no: '03', title: 'Front Programming', en: 'Frontend',
+    no: '03', title: 'Front Programming', en: 'Frontend', hours: '80h',
     desc: 'HTML5 · CSS3(Flex/Grid) · JavaScript를 기본에서 고급까지. 화면을 직접 구성하며 프론트엔드의 기초 체력을 만듭니다.',
     tags: ['HTML5', 'CSS3', 'Flex/Grid', 'JavaScript']
   },
   {
-    no: '04', title: 'Spring Boot', en: 'Backend',
+    no: '04', title: 'Spring Boot', en: 'Backend', hours: '120h',
     desc: 'MVC · RESTful API · 세션 관리 · MyBatis · 파일 업·다운로드 · 유효성검사 · AOP · 예외처리. 회원제 게시판을 직접 구축합니다.',
     tags: ['MVC', 'REST API', 'MyBatis', 'AOP', '유효성검사']
   },
   {
-    no: '05', title: 'Spring Security', en: 'Auth',
+    no: '05', title: 'Spring Security', en: 'Auth', hours: '32h',
     desc: 'Form 기반 인증·인가부터 CSRF · CORS · JWT 인증, OAuth2(Naver/Google) 소셜 로그인 연동까지 실무 보안을 다룹니다.',
     tags: ['인증·인가', 'CSRF', 'CORS', 'JWT', 'OAuth2']
   },
   {
-    no: '06', title: 'React.js', en: 'Frontend',
+    no: '06', title: 'React.js', en: 'Frontend', hours: '64h',
     desc: 'React 기본과 Hooks(useState · useEffect · useReducer), Redux & Toolkit, Router를 익히고 미니 프로젝트로 적용합니다.',
     tags: ['Hooks', 'Redux Toolkit', 'Router', '미니 프로젝트']
   },
   {
-    no: '07', title: 'Spring Cloud & MSA', en: 'Cloud',
+    no: '07', title: 'Spring Cloud & MSA', en: 'Cloud', hours: '56h',
     desc: 'Eureka · Gateway · JWT 인증인가 · Config Server · Bus · FeignClient · Circuit Breaker. Grafana · Prometheus로 모니터링까지.',
     tags: ['Eureka', 'Gateway', 'Config', 'FeignClient', 'Circuit Breaker', '모니터링']
   },
   {
-    no: '08', title: 'Docker & Cloud (Azure)', en: 'DevOps',
+    no: '08', title: 'Docker & Cloud (Azure)', en: 'DevOps', hours: '32h',
     desc: '컨테이너 생성·배포, Google Jib · Build packs. Azure의 VM · VNet · Storage와 NSG · ASG 보안/모니터링을 다룹니다.',
     tags: ['Docker', 'Jib', 'Azure', 'VM/VNet', 'NSG/ASG']
   },
   {
-    no: '09', title: 'Spring AI', en: 'AI',
-    desc: 'On-Prem LLM(Meta Ollama) 연동, AI 텍스트 대화, Prompt Engineering(제로/퓨샷·역할부여·스텝백), Structured Output, Chat Memory, RAG.',
-    tags: ['On-Prem LLM', 'Prompt', 'Structured Output', 'Chat Memory', 'RAG']
+    no: '09', title: 'Spring AI', en: 'AI', hours: '36h', ai: true,
+    desc: 'On-Prem LLM(Meta Ollama) 연동, AI 텍스트 대화, Prompt Engineering(제로/퓨샷·역할부여·스텝백), Structured Output Converter, Chat Memory, RAG까지. Spring 위에서 여러 LLM을 직접 연동합니다.',
+    tags: ['On-Prem LLM', 'Prompt Engineering', 'Structured Output', 'Chat Memory', 'RAG']
   },
   {
-    no: '10', title: '팀 프로젝트', en: 'Project',
-    desc: '배운 모든 기술을 모아 실제 서비스 수준의 풀스택 프로젝트를 완성합니다. 협업·발표 경험과 고퀄리티 포트폴리오를 동시에.',
-    tags: ['협업', '발표', '실서비스 수준', '포트폴리오']
+    no: '10', title: 'Claude Code', en: 'AI', hours: '32h', ai: true,
+    desc: 'Claude Code 기본 · 설치 및 실행부터 Claude Code 기반 웹 페이지 생성, 프롬프트 엔지니어링, 코드 리팩토링 및 성능 최적화, LLM 최적화, MCP(Model Context Protocol)까지 AI 활용 개발을 익힙니다.',
+    tags: ['Claude Code', '프롬프트 엔지니어링', '리팩토링', '성능 최적화', 'MCP']
+  },
+  {
+    no: '11', title: 'Claude Code 기반 팀 프로젝트', en: 'Project', hours: '112h', ai: true,
+    desc: '4일간의 AI 개발환경 학습을 바탕으로, Claude Code를 적용한 대규모 실무형 팀 프로젝트를 진행합니다. AI를 활용해 실제 서비스 수준의 풀스택 결과물을 완성합니다.',
+    tags: ['AI 활용 개발', '대규모 실무형', '협업·발표', '실서비스 수준', '포트폴리오']
   },
 ];
 
@@ -60,10 +65,10 @@ function buildModules() {
   const root = document.getElementById('modules');
   if (!root) return;
   root.innerHTML = MODULES.map(m => `
-    <div class="module">
+    <div class="module${m.ai ? ' ai' : ''}">
       <div class="module-head" role="button" tabindex="0" aria-expanded="false">
         <span class="mnum">${m.no}</span>
-        <span class="mtitle">${m.title}<span class="en">${m.en}</span></span>
+        <span class="mtitle">${m.title}<span class="en">${m.en}</span><span class="hrs">${m.hours}</span>${m.ai ? '<span class="ai-pill">AI</span>' : ''}</span>
         <span class="toggle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
       </div>
       <div class="module-body">
@@ -448,7 +453,6 @@ function buildVoices() {
 /* ---------- Init ---------- */
 function __init28() {
   buildModules();
-  buildCards();
   buildVoices();
   updateCountdown();
   setInterval(updateCountdown, 60 * 1000);
