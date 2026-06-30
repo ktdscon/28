@@ -1162,6 +1162,45 @@ img { max-width: 100%; display: block; }
 .care { background: var(--paper); }
 
 /* ============================================================
+   SCARCITY BAND
+   ============================================================ */
+.scarcity { background: var(--paper-2); border-block: 1px solid var(--line); }
+.scarcity .wrap { text-align: left; }
+.scarcity h2, .scarcity .sc-lead { max-width: 760px; }
+.scarcity .sc-lead {
+  font-size: clamp(16px, 1.9vw, 19px);
+  color: var(--muted); line-height: 1.6; margin-bottom: 18px;
+  text-wrap: pretty;
+}
+.scarcity .sc-lead strong { color: var(--ink-2); font-weight: 700; }
+.scarcity .sc-kicker {
+  display: inline-flex; align-items: center; gap: 8px; white-space: nowrap;
+  font-family: var(--mono); font-size: 13px; font-weight: 600; letter-spacing: .04em;
+  color: var(--red); background: var(--red-soft);
+  padding: 8px 16px; border-radius: 999px; margin-bottom: 26px;
+}
+.scarcity h2 {
+  font-size: clamp(26px, 3.8vw, 44px); font-weight: 800;
+  letter-spacing: -0.03em; line-height: 1.22; text-wrap: balance;
+}
+.scarcity h2 .em { color: var(--red); }
+.scarcity h2 .dim { color: var(--muted); }
+.scarcity .sc-sub {
+  margin-top: 24px; font-size: clamp(16px, 1.9vw, 19px);
+  color: var(--ink-2); line-height: 1.7; text-wrap: pretty;
+}
+.scarcity .sc-sub strong { color: var(--ink); font-weight: 700; }
+.scarcity .sc-operator {
+  display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; max-width: 100%;
+  margin-top: 30px; padding: 12px 22px;
+  font-size: 15px; font-weight: 700; color: var(--ink);
+  background: var(--paper); border: 1px solid var(--line); border-radius: 999px;
+}
+.scarcity .sc-operator .accent-red { white-space: nowrap; }
+@media (max-width: 560px) { .scarcity .sc-operator { white-space: normal; border-radius: 16px; } }
+.scarcity .sc-operator svg { width: 18px; height: 18px; color: var(--red); }
+
+/* ============================================================
    CAREER OUTCOME
    ============================================================ */
 .outcome { background: var(--paper); }
@@ -1202,6 +1241,45 @@ img { max-width: 100%; display: block; }
 .stat-strip .sv { font-size: clamp(26px, 3.4vw, 38px); font-weight: 800; letter-spacing: -0.03em; color: var(--ink); }
 .stat-strip .sv .u { font-size: 0.5em; font-weight: 700; color: var(--red); margin-left: 2px; }
 .stat-strip .sl { font-size: 13px; color: var(--muted); margin-top: 6px; }
+
+/* Hero top trust bar */
+.hero-trustbar {
+  display: flex; align-items: center; gap: 13px; flex-wrap: wrap;
+  margin-bottom: 26px; padding-bottom: 22px; border-bottom: 1px solid var(--line);
+}
+.hero-trustbar .tb-label {
+  font-family: var(--mono); font-size: 10.5px; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--faint); white-space: nowrap;
+}
+.hero-trustbar img { height: 21px; width: auto; object-fit: contain; opacity: .9; }
+.hero-trustbar .tb-div { width: 1px; height: 15px; background: var(--line); }
+@media (max-width: 560px) {
+  .hero-trustbar { gap: 12px; }
+  .hero-trustbar img { height: 20px; }
+  .hero-trustbar .tb-label { width: 100%; }
+}
+
+/* Supporting org logo strip */
+.org-strip {
+  display: flex; align-items: center; gap: clamp(20px, 4vw, 48px);
+  flex-wrap: wrap; justify-content: center;
+  margin-bottom: 24px; padding: 22px 28px;
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+}
+.org-label {
+  font-family: var(--mono); font-size: 12px; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--muted); white-space: nowrap;
+}
+.org-logos { display: flex; align-items: center; gap: clamp(20px, 4vw, 44px); flex-wrap: wrap; justify-content: center; }
+.org-slot { display: flex; align-items: center; }
+.org-slot img { height: 42px; width: auto; object-fit: contain; }
+.org-ph {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  font-size: 14px; font-weight: 700; color: var(--ink-2);
+  padding: 14px 22px; border: 1px dashed var(--faint); border-radius: 10px; background: var(--paper-2);
+}
+.org-ph small { font-family: var(--mono); font-size: 10.5px; font-weight: 500; color: var(--faint); }
+@media (max-width: 560px) { .org-strip { flex-direction: column; gap: 16px; } }
 
 /* Mobile additions */
 @media (max-width: 640px) {

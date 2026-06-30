@@ -98,7 +98,7 @@ function buildModules() {
 
 /* ---------- Countdown ---------- */
 function updateCountdown() {
-  const deadline = new Date('2026-06-30T23:59:59+09:00');
+  const deadline = new Date('2026-07-08T23:59:59+09:00');
   const now = new Date();
   const diff = deadline - now;
   const days = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
