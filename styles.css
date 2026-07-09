@@ -99,6 +99,14 @@ img { max-width: 100%; display: block; }
   max-width: 620px;
   text-wrap: pretty;
 }
+.apply-reassure {
+  font-size: 15px !important;
+  color: var(--ink-2) !important;
+  font-style: italic;
+  margin-top: 12px !important;
+  padding-left: 14px;
+  border-left: 2px solid var(--red);
+}
 
 /* ---------- Buttons ---------- */
 .btn {
